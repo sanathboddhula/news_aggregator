@@ -1,0 +1,18 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News Aggregator</title>
+</head>
+<body>
+  <header>
+    <h1>News Aggregator</h1>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    <p>Copyright {{ year }}</p>
+  </footer>
+</body>
+</html>
