@@ -3,7 +3,7 @@ from .models import Article
 import requests
 
 def index(request):
-    r = requests.get('http://api.mediastack.com/v1/news?access_key=3c7d4824e90ecc3cc72bab6b965ba3dd&countries=us&categories=general')
+    r = requests.get('http://api.mediastack.com/v1/news?access_key={secret_key}&countries=us&categories=general')
     res = r.json()
     data = res['data']
     title = []
@@ -48,7 +48,7 @@ def health(request):
     return render(request, 'aggregator/health.html', {'news': news})
 
 def business(request):
-    r = requests.get('http://api.mediastack.com/v1/news?access_key=3c7d4824e90ecc3cc72bab6b965ba3dd&countries=us&categories=business')
+    r = requests.get('http://api.mediastack.com/v1/news?access_key={secret_key}&countries=us&categories=business')
     res = r.json()
     data = res['data']
     title = []
@@ -68,7 +68,7 @@ def business(request):
     return render(request, 'aggregator/business.html', {'news': news})
 
 def sports(request):
-    r = requests.get('http://api.mediastack.com/v1/news?access_key=3c7d4824e90ecc3cc72bab6b965ba3dd&countries=us&categories=sports')
+    r = requests.get('http://api.mediastack.com/v1/news?access_key={secret_key}&countries=us&categories=sports')
     res = r.json()
     data = res['data']
     title = []
@@ -88,7 +88,7 @@ def sports(request):
     return render(request, 'aggregator/sports.html', {'news': news})
 
 def entertainment(request):
-    r = requests.get('http://api.mediastack.com/v1/news?access_key=3c7d4824e90ecc3cc72bab6b965ba3dd&countries=us&categories=entertainment')
+    r = requests.get('http://api.mediastack.com/v1/news?access_key={secret_key}&countries=us&categories=entertainment')
     res = r.json()
     data = res['data']
     title = []
@@ -108,7 +108,7 @@ def entertainment(request):
     return render(request, 'aggregator/entertainment.html', {'news': news})
 
 def science(request):
-    r = requests.get('http://api.mediastack.com/v1/news?access_key=3c7d4824e90ecc3cc72bab6b965ba3dd&countries=us&categories=science')
+    r = requests.get('http://api.mediastack.com/v1/news?access_key={secret_key}&countries=us&categories=science')
     res = r.json()
     data = res['data']
     title = []
@@ -128,7 +128,7 @@ def science(request):
     return render(request, 'aggregator/science.html', {'news': news})
 
 def technology(request):
-    r = requests.get('http://api.mediastack.com/v1/news?access_key=3c7d4824e90ecc3cc72bab6b965ba3dd&countries=us&categories=technology')
+    r = requests.get('http://api.mediastack.com/v1/news?access_key={secret_key}&countries=us&categories=technology')
     res = r.json()
     data = res['data']
     title = []
